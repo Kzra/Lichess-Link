@@ -14,11 +14,11 @@ First you connect your Arduino to the internet by inputting your network SSID an
 ### MODE 0: Connect to ongoing game.
 Once connected, lichess link will first search for any ongoing games you have. If there is an ongoing game it will connect. If it is your turn your opponent's last move will be displayed and you will be asked to input a move. If its your opponent's turn your last move will be displayed and the screen will refresh every 5 seconds and update if your opponent has made a move.
 
-Move input: You input your moves using UCI format. For example, at the start of the game "e2e4" will move white's pawn from position e2 to position e4. If you would like offer a draw, input "d d " and to resign input "g g ". A promoted pawn becomes a queen.
+**Move input:** You input your moves using UCI format. For example, at the start of the game "e2e4" will move white's pawn from position e2 to position e4. If you would like offer a draw, input "d d " and to resign input "g g ". A promoted pawn becomes a queen.
 
-Multiple ongoing games: I advise against using lichess link for multiple ongoing games, as it will quickly become confusing to know which game you are playing in (game information is displayed just once, when you connect to an ongoing game). If you have multiple ongoing games, lichess link will connect to whichever lichess.org deems as most 'urgent'. In reality this means the game in which it is your turn and your clock time is lowest.
+**Multiple ongoing games:** I advise against using lichess link for multiple ongoing games, as it will quickly become confusing to know which game you are playing in (game information is displayed just once, when you connect to an ongoing game). If you have multiple ongoing games, lichess link will connect to whichever lichess.org deems as most 'urgent'. In reality this means the game in which it is your turn and your clock time is lowest.
 
-If the game ends: If there is only one ongoing game and it ends for any reason, the lichess link will display the winner (if any) and the reason. Press the select button to progress to the next display.
+**If the game ends:** If there is only one ongoing game and it ends for any reason, the lichess link will display the winner (if any) and the reason. Press the select button to progress to the next display.
 
 ### MODE 1: Create a correspondence game
 If there are no ongoing games you will be prompted to choose between two game modes. Mode 1 is to create a correspondence game (with unlimited time for each player). If you select this mode you will be prompted to input a username to which a correspondence game request will be sent. If the request is sent successfully the display will update and refresh every 5 seconds until the request is accepted or declined. In either case the program then returns to Mode 0.
@@ -32,7 +32,7 @@ If a game is found the program will return to Mode 0, if not you will be prompte
 
 **Pre-move input:** Due to the time delay in receiving game information you are required to input your first move before the game has begun. This move will be made for you at the start of the game whether you are playing as white or black. It is important that this is a valid move as any invalid move is likely to abort the game.
 
-*Currently you must also connect to the game on your laptop or smartphone. If you play solely on the Arduino your opponent will be able to claim victory after 90 seconds as the lichess server believes you have disconnected from the game. This is a limitation that can hopefully be solved in a future version of the software!
+*Currently you must also connect to the game on your laptop or smartphone. If you play solely on the Arduino your opponent will be able to claim victory after 90 seconds as the lichess server believes you have disconnected from the game. This is a limitation that can hopefully be solved in a future version of the software!*
 
 ### ERROR MESSAGES
 While using the lichess link you may receive certain information or error messages on the screen. Here is how to interpret them:
