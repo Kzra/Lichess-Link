@@ -8,6 +8,7 @@ and allows you to play a correspondance or random opponent chess game
 on your arduino using a LCD display shield with input buttons. 
 
 Please see Github page for more thorough documentation : 
+https://github.com/Kzra/Lichess-Link
 
 Acknowledgements: 
 Several chunks of code were repurposed from 
