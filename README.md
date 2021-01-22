@@ -51,11 +51,11 @@ Attach the LCD shield to your Arduino, input your secret information to the ardu
 ## Acknowledgements
 This project was only possible due to the fantastic documentation and examples of two libraries and the lichess.org API.
 
-1. Arduino Json. This library is used throughout the code to deserialize the json output from the lichess API following an HTTP request. The library allows you to stream the output directly into a json document. There is also this great tool which computes the memory requirements of a json output.
+1. [Arduino Json](https://arduinojson.org). This library is used throughout the code to deserialize the json output from the lichess API following an HTTP request. The library allows you to stream the output directly into a json document. There is also [this great tool](https://arduinojson.org/v6/assistant/) which computes the memory requirements of a json output.
 
-2. Wifi NiNa. This library is used to connect to the lichess.org server and make HTTP requests. A lot of the lichess link code was repurposed from examples in this library.
+2. [Wifi NiNa](https://www.arduino.cc/en/Reference/WiFiNINA). This library is used to connect to the lichess.org server and make HTTP requests. A lot of the lichess link code was repurposed from examples in this library.
 
-3. Lichess.org API. This API is used to communicate with lichess.org. In this program I make three kinds of GET request and three kinds of POST request.
+3. [Lichess.org API](https://lichess.org/api). This API is used to communicate with lichess.org. In this program I make three kinds of GET request and three kinds of POST request.
 
     * GET #1 : /api/account - to retrieve the current users username
     * GET #2: /api/account/playing - to stream ongoing games (mode 0)
