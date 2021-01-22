@@ -3,6 +3,8 @@ Link an Arduino Uno with Wifi to the lichess.org API to play online chess the ol
 
 Full tutorial: https://create.arduino.cc/projecthub/kzra/lichess-link-cbdbab
 
+Video: https://www.youtube.com/watch?v=KKcA8tIE8Uk
+
 ## Online chess, the old fashioned way
 Sick of being trolled online while losing to 13 year olds with bad manners? Want to play chess over the board without the distraction of a smartphone or laptop? Want to play correspondence games with friends or connect to random opponents?
 
