@@ -23,25 +23,25 @@ If the game ends: If there is only one ongoing game and it ends for any reason, 
 ### MODE 1: Create a correspondence game
 If there are no ongoing games you will be prompted to choose between two game modes. Mode 1 is to create a correspondence game (with unlimited time for each player). If you select this mode you will be prompted to input a username to which a correspondence game request will be sent. If the request is sent successfully the display will update and refresh every 5 seconds until the request is accepted or declined. In either case the program then returns to Mode 0.
 
-Username input: You can input any username up to 16 characters long. The username cannot contain spaces or non alpha-numeric characters.
+**Username input:** You can input any username up to 16 characters long. The username cannot contain spaces or non alpha-numeric characters.
 
 ### MODE 2: Create a game with a random opponent.*
 Mode 2 creates a timed game against any public lichess.org user. You will be prompted to input the time (a value between 60 and 180 minutes) and the increment (a value between 0 and 180 seconds) of the game, choose a colour, and input a pre-move.
 
 If a game is found the program will return to Mode 0, if not you will be prompted to choose between Mode 1 and Mode 2 again.
 
-Pre-move input: Due to the time delay in receiving game information you are required to input your first move before the game has begun. This move will be made for you at the start of the game whether you are playing as white or black. It is important that this is a valid move as any invalid move is likely to abort the game.
+**Pre-move input:** Due to the time delay in receiving game information you are required to input your first move before the game has begun. This move will be made for you at the start of the game whether you are playing as white or black. It is important that this is a valid move as any invalid move is likely to abort the game.
 
 *Currently you must also connect to the game on your laptop or smartphone. If you play solely on the Arduino your opponent will be able to claim victory after 90 seconds as the lichess server believes you have disconnected from the game. This is a limitation that can hopefully be solved in a future version of the software!
 
 ### ERROR MESSAGES
 While using the lichess link you may receive certain information or error messages on the screen. Here is how to interpret them:
 
-Wifi failed: Your arduino was unable to connect to your WiFi. Check your connection settings and try again.
+**Wifi failed:** Your arduino was unable to connect to your WiFi. Check your connection settings and try again.
 
-Server failed: Your arduino was unable to contact the lichess.org server, you should press the "reset" button on the LCD shield.
+**Server failed:** Your arduino was unable to contact the lichess.org server, you should press the "reset" button on the LCD shield.
 
-HTTP failed: Your arduino was unable to read the response to an HTTP request. If this is accompanied by Bad Request you are receiving a 400 response. This is likely if you have a made an invalid move or attempted to stream a game that has already ended. After any HTTP fail your Arduino will automatically reset so there is no need to do anything. If you are repeatedly receiving HTTP fails it may be that the delay time between sending and processing a request is too small. You can increase it by adjusting the delayTime variable in the code (default value: 5000).
+**HTTP failed:** Your arduino was unable to read the response to an HTTP request. If this is accompanied by Bad Request you are receiving a 400 response. This is likely if you have a made an invalid move or attempted to stream a game that has already ended. After any HTTP fail your Arduino will automatically reset so there is no need to do anything. If you are repeatedly receiving HTTP fails it may be that the delay time between sending and processing a request is too small. You can increase it by adjusting the delayTime variable in the code (default value: 5000).
 
 ## Assembling the lichess link
 This should be quite simple. Install the following libraries using the library manager on your Arduino IDE: ArduinoJson (v.6.), WifiNINA and Adafruit_RGBLCDShield.
@@ -57,14 +57,14 @@ This project was only possible due to the fantastic documentation and examples o
 
 3. Lichess.org API. This API is used to communicate with lichess.org. In this program I make three kinds of GET request and three kinds of POST request.
 
-* GET #1 : /api/account - to retrieve the current users username
-* GET #2: /api/account/playing - to stream ongoing games (mode 0)
-* GET #3: /api/board/game/stream/ - to determine the outcome of an ended game
-* POST #1: /api/board/game/ - to send move information
-* POST #2: /api/challenge/ - to create a correspondence challenge (mode 1)
-* POST #3: /api/board/seek - to create a random challenge (mode 2)
+    * GET #1 : /api/account - to retrieve the current users username
+    * GET #2: /api/account/playing - to stream ongoing games (mode 0)
+    * GET #3: /api/board/game/stream/ - to determine the outcome of an ended game
+    * POST #1: /api/board/game/ - to send move information
+    * POST #2: /api/challenge/ - to create a correspondence challenge (mode 1)
+    * POST #3: /api/board/seek - to create a random challenge (mode 2)
 
 ## Contribute/Feedback
 This project is currently in an alpha version. This was my first time doing any internet-based programming so I expect there are many ways the project could be improved! Get in touch or comment if you have any feedback on how to make the program more efficient. I've uploaded the code on GitHub so you can fork the repository and make changes if you prefer to work that way.
 
-If you decide create a lichess link, I hope it brings you peace and allows you to enjoy online chess in a new way.
+If you decide create a lichess link, I hope it brings you peace and allows you to enjoy online chess in a new way.  
